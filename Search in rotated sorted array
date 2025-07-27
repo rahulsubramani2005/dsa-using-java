@@ -1,0 +1,46 @@
+import java.util.*;
+public class Main{
+public static int search(int[] arr,int target){
+    int low=0;
+    int high=arr.length-1;
+    while(low<=high){
+        int mid=(low+high)/2;
+        if(arr[mid]==target){
+            return mid;
+        }
+        else if(arr[low]<=arr[mid]){ // the left side is sorted
+            if(arr[low]<=target && target < arr[mid]){
+                high=mid-1;// the target is left side
+            }
+            else{
+                low=mid+1;// the target is right side
+            }
+        }
+        
+        else{// right side is sorted
+            if(arr[mid]<target && target<=arr[high]){//target is in right side
+                low=mid+1;
+            }
+            else{
+                high=mid-1;
+                
+            }
+        }
+    }
+    return -1;
+}
+public static void main(String...args){
+    int arr[]={4,5,6,7,0,1,2};
+    int target=0;
+    int result=search(arr,target);
+    if(result!=-1){
+        System.out.println("the target is found at index "+ result);
+    }
+    else{
+        System.out.println("the element is not found");
+    }
+}
+}
+
+output;
+the element is found at index 4
