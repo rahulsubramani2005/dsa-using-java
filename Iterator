@@ -1,0 +1,25 @@
+// Iterator Example
+
+import java.util.*;
+public class Main{
+    public static void main(String...args){
+        List<String> it=new ArrayList<>(List.of("A","B","C","D"));
+        Iterator<String>itr=it.iterator();
+        while(itr.hasNext()){
+            String a=itr.next();
+            if(a.equals("B")){
+                itr.remove();
+            }
+            else{
+                System.out.println(a);
+            }
+            
+        }
+        
+    }
+}
+
+output;
+A
+C
+D
