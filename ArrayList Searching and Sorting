@@ -1,0 +1,38 @@
+import java.util.*;
+import java.util.Collections;
+public class Main{
+    public static void main(String...args){
+        ArrayList<String>name=new ArrayList<>();
+        name.add("Rahul");
+        name.add("Ra");
+        name.add("hul");
+        System.out.println(name);
+        
+        // sorting
+        Collections.sort(name);
+        System.out.println(name);
+        
+        //size
+        System.out.println(name.size());
+        
+        //find the index value
+        System.out.println(name.indexOf("Ra"));
+        
+        //looping
+        for(String n:name){
+            System.out.println(n);
+        }
+        
+        
+    }
+}
+
+
+output:
+[Rahul, Ra, hul]
+[Ra, Rahul, hul]
+3
+0
+Ra
+Rahul
+hul
