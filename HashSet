@@ -1,0 +1,43 @@
+//No duplicates
+import java.util.*;
+public class Main{
+    public static void main(String...args){
+        HashSet<Integer>n=new HashSet<>();
+        //Add values
+        n.add(1);
+        n.add(5);
+        n.add(3);
+        n.add(3);
+        n.add(5);
+        n.add(2);
+        System.out.println(n);
+        //size 
+        System.out.println(n.size());
+        //contains
+        System.out.println(n.contains(3));
+        n.clear();
+        System.out.println(" ");
+        System.out.println(" ");
+        // two HashSet
+        HashSet<Integer>s1=new HashSet<>(Arrays.asList(1,2,3,4));
+        HashSet<Integer>s2=new HashSet<>(Arrays.asList(5,6,7,3,2));
+        s1.addAll(s2);
+        System.out.println("combine s1 and s2 "+s1);
+        s1.removeAll(s2);
+        System.out.println("removed s2 from s1 "+s1);
+        s1.retainAll(s2);
+        System.out.println("retained s2 "+s1);
+    }
+}
+
+
+output;
+[1, 2, 3, 5]
+4
+true
+ 
+
+
+combine s1 and s2 [1, 2, 3, 4, 5, 6, 7]
+removed s2 from s1 [1, 4]
+retained s2 []
