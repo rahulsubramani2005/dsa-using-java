@@ -1,0 +1,42 @@
+import java.util.*;
+import java.util.Collections;
+public class Main{
+    public static void main(String...args){
+        ArrayList<String>cars=new ArrayList<>();
+        cars.add("Kia");
+        cars.add("Shift");
+        cars.add("Inova");
+        cars.add("polo gt");
+        System.out.println(cars);
+        //inserting the values
+        cars.add(0,"I10");
+        System.out.println(cars);
+        //replacing the elements
+        cars.set(2,"Maruthi Shift");
+        System.out.println(cars);
+        //remove the element
+        cars.remove(0);
+        System.out.println(cars);
+        //size of the ArrayList
+        System.out.println(cars.size());
+        //Sorting the ArrayList
+        Collections.sort(cars);
+        System.out.println(cars);
+        //Contains 
+        System.out.println(cars.contains("Kia"));
+        //clear allelements
+        cars.clear();
+        System.out.println(cars);
+        
+    }
+}
+
+output;
+[Kia, Shift, Inova, polo gt]
+[I10, Kia, Shift, Inova, polo gt]
+[I10, Kia, Maruthi Shift, Inova, polo gt]
+[Kia, Maruthi Shift, Inova, polo gt]
+4
+[Inova, Kia, Maruthi Shift, polo gt]
+true
+[]
