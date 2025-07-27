@@ -1,0 +1,40 @@
+import java.util.*;
+import java.util.Collections;
+public class Main{
+    public static void main(String...args){
+        LinkedList<String>a=new LinkedList<>();
+        a.add("Apple");
+        a.add("Banana");
+        a.add("Cherry");
+        System.out.println(a);
+        //inserting the element
+        a.add(1,"Orange");
+        a.addFirst("Mango");
+        a.addLast("Grapes");
+        //get the value
+        System.out.println(a.get(0));
+        System.out.println(a.getFirst());
+        System.out.println(a.getLast());
+        //replace the values
+        System.out.println(a.set(3,"Kiwi"));
+        //remove the elements
+        a.remove(4);
+        System.out.println(a);
+       // a.removelast();
+       // a.removeFirst();
+        System.out.println(a);
+        a.clear();
+        System.out.println(a);
+        
+        
+    }
+}
+output;
+[Apple, Banana, Cherry]
+Mango
+Mango
+Grapes
+Orange
+[Mango, Apple, Orange, Kiwi, Cherry, Grapes]
+[Mango, Apple, Orange, Kiwi, Grapes]
+[]
