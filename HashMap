@@ -1,0 +1,41 @@
+//// HashMap exmple
+
+import java.util.*;
+public class Main{
+    public static void main(String...args){
+        HashMap<String,Integer> marks=new HashMap<>();
+        //Add values
+        marks.put("Rahul",90);
+        marks.put("Ram",95);
+        marks.put("Jaswanth",100);
+        
+        System.out.println(marks);
+        System.out.println(marks.get("Rahul"));
+        
+        //Accessing each element using for each 
+        
+        for(HashMap.Entry<String,Integer> Entry:marks.entrySet()){
+            System.out.println(Entry.getKey());
+            System.out.println(Entry.getValue());
+        }
+        
+        //checking Key 
+        if(marks.containsKey("Ram")){
+            System.out.println("present");
+        }
+        marks.remove("Jaswanth");
+        System.out.println(marks);
+    }
+}
+
+output:
+{Rahul=90, Ram=95, Jaswanth=100}
+90
+Rahul
+90
+Ram
+95
+Jaswanth
+100
+present
+{Rahul=90, Ram=95}
