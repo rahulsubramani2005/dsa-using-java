@@ -1,0 +1,54 @@
+import java.util.*;
+public class Main{
+    static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+    //head
+    Node head=null;
+    // add the node 
+    public void addNode(int data){
+        Node newNode=new Node(data);
+        if(head==null){
+            head=newNode;
+        }
+        else{
+            Node current=head;
+            //System.out.println("add"+current);
+            while(current.next!=null){
+                current=current.next;
+            }
+            current.next=newNode;
+        }
+    }
+    
+    //dispaly
+    
+    public void display(){
+        if(head==null){
+            System.out.println("the linked list is empty");
+        }
+        Node current=head;
+        //System.out.println("dis"+current);
+        while(current!=null){
+            System.out.print(current.data+"->");
+            current=current.next;
+        }
+        System.out.print("null");
+    }
+    public static void main(String...args){
+        Main list=new Main();
+        Scanner g=new Scanner(System.in);
+        
+        int n=g.nextInt();
+        for(int i=1;i<=n;i++){
+            int value=g.nextInt();
+            list.addNode(value);
+        }
+        list.display();
+    }
+}
